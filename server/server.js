@@ -14,15 +14,11 @@ const server = new ApolloServer({
   resolvers,
 });
 
-const startApolloServer = async () => {
-  await server.start();
-  return server.applyMiddleware({ app });
-};
-
-startApolloServer();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+server.applyMiddleware({ app });
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
