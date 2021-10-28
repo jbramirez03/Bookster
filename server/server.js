@@ -13,6 +13,13 @@ const server = new ApolloServer({
   resolvers,
 });
 
+const startApolloServer = async () => {
+  await server.start();
+  return server.applyMiddleware({ app });
+};
+
+startApolloServer();
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
