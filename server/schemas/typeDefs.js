@@ -10,6 +10,7 @@ const typeDefs = gql`
         title: String!
     }
 
+    
     type User {
         _id: ID
         username: String
@@ -18,6 +19,10 @@ const typeDefs = gql`
         savedBooks: [Book]
       }
     
+    type Query {
+        users: [User]
+        books: [Book]
+    }
 
 
 `;
