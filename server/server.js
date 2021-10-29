@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
-const routes = require('./routes');
+// const routes = require('./routes');
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 
@@ -30,7 +30,7 @@ app.get('*', (req, res) => {
 });
 
 
-app.use(routes);
+// app.use(routes);
 
 db.once('open', () => {
   app.listen(PORT, () => {
