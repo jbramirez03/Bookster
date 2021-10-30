@@ -44,7 +44,7 @@ const SavedBooks = () => {
     <>
       <Jumbotron fluid className='text-light jumbotron_background'>
         <Container>
-          <h1>Viewing saved books!</h1>
+          <h1 className='text-center'>Viewing saved books!</h1>
         </Container>
       </Jumbotron>
       <Container>
