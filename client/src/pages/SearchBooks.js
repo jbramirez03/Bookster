@@ -117,7 +117,7 @@ const SearchBooks = () => {
         <Container fluid>
           {searchedBooks.map((book) => {
             return (
-              <Row key={book.bookId} className='flex-row mt-5 justify-content-center'>
+              <Row key={book.bookId} className='flex-row mt-5 justify-content-center bg-light p-3'>
                 {book.image ? <div>
                   <img src={book.image} alt={`The cover for ${book.title}`} />
                 </div> : null}
