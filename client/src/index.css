@@ -18,3 +18,7 @@ h6 {
   font-weight: 300;
   font-style: italic;
 }
+
+.jumbotron_background {
+  background-color: #355c7d;
+}
