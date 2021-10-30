@@ -1,15 +1,17 @@
 import React from 'react';
 import { Jumbotron, Container, Button, Row } from 'react-bootstrap';
 import { useMutation, useQuery } from '@apollo/react-hooks';
-
 import { QUERY_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
+  // create instance of useQuery with Query_me query passed as an argument
   const { loading, data } = useQuery(QUERY_ME);
+  // declare useMutation hook with the remove_book mutation passed as an argument
   const [removeBook] = useMutation(REMOVE_BOOK);
+  // set userData to data that is returned from the me query
   const userData = data?.me || [];
 
   if (!userData?.username) {
@@ -25,6 +27,7 @@ const SavedBooks = () => {
     }
 
     try {
+      // pass in the id for the desired book to be removed
       await removeBook({
         variables: { bookId }
       });
