@@ -8,6 +8,8 @@
 
 ## Summary
 
+This is a full-stack MERN web application that uses react as a front end with graphql handling requests and creating a single endpoint in order to fetch data from google's book API in order to view books and save them to a user's profile once they are logged in. JSON web tokens are used in order to secure fetch calls and posts or updates to a database.
+
 ## Table of Contents
 
 - [Usage](#usage)
@@ -22,7 +24,17 @@
 
 ## Usage
 
+In order to search for books you simply have to input a book title into the search form and a list of books appear corresponding to your search. If you would like to save books and their information, you must create a user account and once you are logged in you may save and remove books from your profile.
+
 ## Functionality
+
+### Before login:
+
+![Bookster](https://user-images.githubusercontent.com/82244776/139557332-35479ba7-fc24-43ab-bc83-642e4eab07ca.gif)
+
+### Save and remove books:
+
+![Bookster (1)](https://user-images.githubusercontent.com/82244776/139557452-21a54f0e-404f-4078-b50e-f0fd0babadb5.gif)
 
 ## Credits
 
@@ -34,6 +46,8 @@ Jason Barrera-Ramirez<br>
 This Project is covered by the [MIT] license
 
 ## Challenges
+
+The main challenge with this application was handling the calls to the database with graphql, setting up queries and mutations with typeDefs and resolvers. The next big challenge was linking the front end of the application to the backend with allowing the front end to make queries and mutations using `@apollo/client` and `@apollo/react-hooks`.
 
 ## Technologies
 
