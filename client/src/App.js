@@ -6,6 +6,7 @@ import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 import ApolloClient from "apollo-boost";
 
+// Connecting graphql to the front-end through apolloClient from react-hooks.
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem("id_token");
@@ -19,7 +20,7 @@ const client = new ApolloClient({
   uri: "/graphql",
 });
 
-
+// Wrap app component in the ApolloProvider with client given a value
 function App() {
   return (
     <ApolloProvider client={client}>
