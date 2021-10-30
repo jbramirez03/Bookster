@@ -73,7 +73,11 @@ The main challenge with this application was handling the calls to the database 
 
 ## Features
 
+The main feature of this application is the ability to handle calls to a database with graphql and being able to specify what information needs to come back from the database. Another great feature of this application is the ability to secure routes/calls with JSON web tokens in order to validate whether or not a user can make queries and mutations.
+
 ## Future Development
+
+A path this application is headed towards is having the ability to include links to actually purchase a book or look up more information on a certain book through wiki. Another future concept would the ability to create a filter for what kind of book results a user would like to get back.
 
 ## How to Contribute
 
@@ -85,4 +89,4 @@ If there are any questions about the project get in contact with me at my [Email
 
 ## Link
 
-This is the link to the live site on
+This is the link to the live site on [Heroku](https://desolate-forest-41822.herokuapp.com/).
