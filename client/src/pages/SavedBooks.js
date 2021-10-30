@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
+import { Jumbotron, Container, Button, Row } from 'react-bootstrap';
 import { useMutation, useQuery } from '@apollo/react-hooks';
 
 import { QUERY_ME } from '../utils/queries';
@@ -53,23 +53,25 @@ const SavedBooks = () => {
             ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
             : 'You have no saved books!'}
         </h2>
-        <CardColumns>
+        <Container fluid>
           {userData.savedBooks.map((book) => {
             return (
-              <Card key={book.bookId} border='dark'>
-                {book.image ? <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' /> : null}
-                <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
+              <Row key={book.bookId} className='flex-row mt-5 justify-content-center bg-light p-3'>
+                {book.image ? <div>
+                  <img src={book.image} alt={`The cover for ${book.title}`} />
+                </div> : null}
+                <div>
+                  <h3>{book.title}</h3>
                   <p className='small'>Authors: {book.authors}</p>
-                  <Card.Text>{book.description}</Card.Text>
-                  <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
-                    Delete this Book!
+                  <p>{book.description}</p>
+                </div>
+                <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
+                  Delete this Book!
                   </Button>
-                </Card.Body>
-              </Card>
+              </Row>
             );
           })}
-        </CardColumns>
+        </Container>
       </Container>
     </>
   );
