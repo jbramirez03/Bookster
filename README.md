@@ -59,6 +59,7 @@ The main challenge with this application was handling the calls to the database 
 [<img align="left" width="26px" alt="heroku" src="https://user-images.githubusercontent.com/82244776/132110346-720c197f-d193-4c6f-b84d-e9dc0420bba9.png">][heroku]
 [<img align='left' width='26px' alt='react' src='https://user-images.githubusercontent.com/82244776/137604115-dcc195ed-27dd-4fad-adf1-2fb635ae074e.png'>][react]
 [<img align='left' width='26px' alt='bootstrap' src='https://user-images.githubusercontent.com/82244776/139557061-3fc54b2b-1db1-48a8-b699-8259d113ff21.png'>][bootstrap]
+[<img align='left' width='26px' alt='graphql' src='https://user-images.githubusercontent.com/82244776/139560352-83ec0210-522a-47a6-b0e5-2ef317f6921f.png'>][graphql]
 [<img align="left" width="26px" alt="github" src="https://user-images.githubusercontent.com/82244776/132110367-f5e3b9f5-b3cb-49c1-be7c-aded0df1b8c1.png">][github]<br><br>
 
 [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
@@ -70,6 +71,7 @@ The main challenge with this application was handling the calls to the database 
 [mongodb]: https://www.mongodb.com/
 [heroku]: https://devcenter.heroku.com/categories/reference
 [bootstrap]: https://getbootstrap.com/docs/4.1/getting-started/introduction/
+[graphql]: https://graphql.org/
 
 ## Features
 
