@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+// Created mutations with variables being passed in through to the mutations defined in the typeDefs file.
 export const ADD_USER = gql`
 
 mutation addUser($username: String!, $email: String!, $password: String!) {
