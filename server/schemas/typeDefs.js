@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+// Set type Defs for each query and the fields we can call when we run a query.
 const typeDefs = gql`
 
 type Book {
