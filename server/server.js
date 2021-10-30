@@ -1,7 +1,7 @@
+// import necessary modules
 const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
-// const routes = require('./routes');
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
@@ -10,6 +10,7 @@ const { authMiddleware } = require('./utils/auth');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Create new instance of an apollo server with typeDefs and resolvers being passed in, as well as the context set to the middleware functions for auth
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -33,8 +34,7 @@ app.get('*', (req, res) => {
 });
 
 
-// app.use(routes);
-
+// Start server as well as graphql playground
 db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
