@@ -1,3 +1,5 @@
+// created helper functions to grab saved books from local storage and remove them.
+
 export const getSavedBookIds = () => {
   const savedBookIds = localStorage.getItem('saved_books')
     ? JSON.parse(localStorage.getItem('saved_books'))
