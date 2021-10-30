@@ -16,6 +16,7 @@ const SearchBooks = () => {
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
+  // Use the useMutation hook in order to be able to use the save_book mutation
   const [saveBook] = useMutation(SAVE_BOOK);
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
@@ -32,6 +33,7 @@ const SearchBooks = () => {
       return false;
     }
 
+    // handle api call and set the searched bookData
     try {
       const response = await searchGoogleBooks(searchInput);
 
@@ -67,7 +69,7 @@ const SearchBooks = () => {
     if (!token) {
       return false;
     }
-
+    // Add the input for the mutation save_book in a variable object set to bookToSave
     try {
       await saveBook({
         variables: { input: bookToSave },
@@ -81,6 +83,7 @@ const SearchBooks = () => {
     }
   };
 
+  // rendering book information as well as form for search
   return (
     <>
       <Jumbotron fluid className='text-light jumbotron_background'>
