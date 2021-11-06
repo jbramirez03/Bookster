@@ -1,4 +1,4 @@
-<h1 align="center">React-Portfolio</h1> 
+<h1 align="center">Bookster</h1> 
   
 [LinkedIn]: https://www.linkedin.com/in/jason-barrera-ramirez-b2a473204/
 ![license-badge](https://img.shields.io/badge/License-MIT-blueviolet)
